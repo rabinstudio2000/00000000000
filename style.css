@@ -8,3 +8,11 @@
 .extra-filters{display:flex;gap:8px}.extra-filters select{background:#171713;color:#eee9dc;border:1px solid #514d42;padding:10px;max-width:150px}
 /* Keep the ambient canvas and angled ticker within the viewport. */
 html,body{overflow-x:clip}
+
+/* About portrait */
+.about{align-items:center;gap:clamp(32px,7vw,120px)}.about-intro,.about-copy{min-width:0}.about-portrait{position:relative;isolation:isolate;margin:clamp(24px,3vw,40px) 0 0;max-width:500px}.about-portrait::before{content:"";position:absolute;inset:12px -12px -12px 12px;border:1px solid var(--accent,#c9aa70);opacity:.45;z-index:-1}.about-portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 37%;border:1px solid #595344}@media(max-width:700px){.about{gap:36px}.about-portrait{margin-top:24px;max-width:480px}}
+
+/* English biography reads naturally while the overall layout stays in place. */
+.about-text{direction:ltr;text-align:left}
+
+.donarez-extra{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:20px;align-items:center;position:relative;z-index:1}.donarez-extra p{max-width:100%;white-space:pre-wrap}.donarez-extra img{display:block;width:min(360px,100%);height:auto;object-fit:contain}
