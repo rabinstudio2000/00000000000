@@ -10,4 +10,4 @@ const STORE_KEY='donarez.projects.v1';
 function loadProjects(){try{const value=localStorage.getItem(STORE_KEY);if(value!==null){const data=JSON.parse(value);if(Array.isArray(data))return data}}catch(e){console.error('Could not load projects',e)}return structuredClone(DEFAULT_PROJECTS)}
 function saveProjects(items){localStorage.setItem(STORE_KEY,JSON.stringify(items))}
 function escapeHTML(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function safeImage(value){const s=String(value||'');return /^(images\/|data:image\/(png|jpeg|webp|gif);base64,)/i.test(s)?s:''}
+function safeImage(value){const s=String(value||'');return /^(images\/|data:image\/(png|jpeg|webp|gif);base64,|https:\/\/xegufvibzrkxfuqihhau\.supabase\.co\/storage\/v1\/object\/public\/donarez-media\/)/i.test(s)?s:''}
