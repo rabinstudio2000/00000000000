@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>ویرایش دیداری | DON.AREZ</title>
+  <link rel="stylesheet" href="style.css?v=2"><link rel="stylesheet" href="visual-editor.css?v=1">
+</head>
+<body class="visual-editor">
+<header class="editor-bar"><a href="admin.html" class="back">← بازگشت به مدیریت</a><strong>ویرایش دیداری صفحه</strong><div class="editor-actions"><button id="discard" type="button" disabled>انصراف از تغییرات</button><button id="save" class="primary" type="button" disabled>ذخیره و انتشار</button></div></header>
+<p id="editor-status" role="status" class="editor-status">در حال بررسی ورود دومرحله‌ای…</p>
+<main id="editor-workspace" class="workspace" hidden>
+  <aside class="inspector">
+    <p class="eyebrow">LIVE PAGE EDITOR</p><h1>ویرایش صفحه اصلی</h1>
+    <p class="hint">روی متن یا فضای خالی هر بخش در پیش‌نمایش بزنید. برای متن و عکس پروژه‌ها از بخش پروژه‌ها و رسانه استفاده کنید.</p>
+    <label>انتخاب جزء<select id="element-list"></select></label>
+    <p id="selection-name" class="selection-name">یک جزء را انتخاب کنید</p>
+    <div id="controls" hidden>
+      <label id="text-label">متن<textarea id="text-value" dir="auto" rows="4" maxlength="3000"></textarea></label>
+      <label class="toggle"><input type="checkbox" id="color-enabled"> تغییر رنگ متن</label><input id="color" type="color" value="#eee9dc" aria-label="رنگ متن">
+      <label class="toggle"><input type="checkbox" id="background-enabled"> تغییر رنگ پس‌زمینه</label><input id="background" type="color" value="#10100e" aria-label="رنگ پس‌زمینه">
+      <label>فونت<select id="font"><option value="">پیش‌فرض بخش</option><option value="vazir">وزیر</option><option value="tahoma">Tahoma</option><option value="arial">Arial</option><option value="georgia">Georgia</option><option value="impact">Impact</option></select></label>
+      <label>اندازه متن (پیکسل؛ خالی یعنی پیش‌فرض)<input id="size" type="number" min="8" max="160" placeholder="پیش‌فرض"></label>
+      <label>ضخامت متن<select id="weight"><option value="">پیش‌فرض</option><option>400</option><option>500</option><option>600</option><option>700</option><option>800</option><option>900</option></select></label>
+      <label>چینش متن<select id="align"><option value="">پیش‌فرض</option><option value="right">راست</option><option value="center">وسط</option><option value="left">چپ</option></select></label>
+      <button id="reset-element" type="button">بازگردانی این جزء</button>
+    </div>
+    <p class="hint">تغییرات تا زدن «ذخیره و انتشار» فقط در پیش‌نمایش هستند.</p>
+  </aside>
+  <div class="preview-wrap"><div class="preview-toolbar"><span>پیش‌نمایش زنده</span><div><button id="desktop" type="button" aria-pressed="true">دسکتاپ</button><button id="mobile" type="button" aria-pressed="false">موبایل</button></div></div><iframe id="preview" title="پیش‌نمایش سایت برای ویرایش" src="about:blank"></iframe></div>
+</main>
+<script type="module" src="visual-editor.js?v=1"></script>
+</body></html>
